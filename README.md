@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# ✔️ My Todo List만들기
+---
+![](https://velog.velcdn.com/images/jhhyung/post/feb5c66d-6152-4bb2-a841-0e553b9ea18a/image.png)
+항해99 3주차 [React 입문주차] 개인과제로 처음 React를 사용하여 프로젝트를 만들었습니다!😆
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+### 📌구현기능
+- Todo 추가하기
+  - 제목과 내용을 입력하고, [추가하기] 버튼을 클릭하면 Working..🔥 에 새로운 Todo가 추가되고 input창 초기화
+- Todo 상태에 따른 위치 배치
+  - Todo를 완료하기 전이면, Working..🔥 라인에, 완료면 Done..!🎉 라인에 위치
+  - 완료하기 전의 버튼 내용은 [완료], 완료 후에는 [취소]로 상태를 변경할 수 있게 구현
+---
+### 📌Trouble Shooting
+- ID에 같은 값이 중복되어 들어가는 오류 발생
+  - `useRef` 훅을 사용하여 각 Todo블럭마다 고유 ID값을 생성했는데, `input`의 제목과 내용이 비어있는 상태로 [추가하기] 버튼을 클릭하여 Todo 생성시 해당 블럭들의 ID가 모두 초기값인 `0`으로 들어가는 현상을 발견했다.
+  - `useState` 훅은 새로 변한 값이 있을 때의 내용을 반환하는 훅으로 초기값이 이미 `0`인 상황에서 아무 내용도 넣지 않고 [추가하기]버튼을 눌러 그냥 초기값이 계속해서 들어갔던 것..
+  
+➡️ 제목의 `input` 태그에 `required`를 추가하여 사용자가 빈칸을 추가하지 못하도록 하여 ID중복 현상을 방지
+---
+#### 💪큰 힘이 되어준 팀원들의 github
+✨[임주영] (https://github.com/JJOOYYONG/react_hm_1.git)
+✨[이호진] (https://github.com/hojncode/React_1.git) 
