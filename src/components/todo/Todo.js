@@ -2,7 +2,6 @@ import React from "react"
 import './style.css'
 
 function Todo({todo, onDeleteHandler, onCompleteHandler}) {
-    // console.log(todo)
     return (
         <div className="todo_container">
             <h2>{todo.title}</h2>
