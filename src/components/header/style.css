@@ -1,0 +1,8 @@
+.container {
+    /* 아이템을 자신이 가진 내용물의 width 만큼만 사용하여 배치*/
+    display: flex;
+    /* 아이템들의 간격 조정(끝과 끝) */
+    justify-content: space-between;
+    
+    padding: 20px;
+}

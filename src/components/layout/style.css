@@ -1,0 +1,8 @@
+.layout {
+    /* 레이아웃의 최대, 최소 너비 지정 */
+    max-width: 1200px;
+    min-width: 800px;
+    
+    /* 레이아웃 가운데 정렬 */
+    margin: 0 auto;
+}
